@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECONMAIL | Solution Research Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="report-header">
+        <div>
+            <div class="brand">RECONMAIL</div>
+            <div class="subtitle">Solution Research Report</div>
+        </div>
+
+        <div class="header-meta">
+            <strong>SIH26159</strong>
+            <span>Team Audax · Smart India Hackathon 2026</span>
+        </div>
+    </header>
+
+    <main class="report">
+
+        <!-- COVER -->
+        <section class="cover">
+            <div class="eyebrow">SMART INDIA HACKATHON 2026</div>
+
+            <h1>RECONMAIL</h1>
+
+            <h2>
+                AI-Assisted Cryptographic Security Posture Assessment
+                for Secure Email Communications
+            </h2>
+
+            <div class="cover-meta">
+                <span><strong>Problem Statement</strong> SIH26159</span>
+                <span><strong>Organization</strong> National Technical Research Organisation</span>
+                <span><strong>Theme</strong> Blockchain & Cybersecurity</span>
+                <span><strong>Category</strong> Software</span>
+            </div>
+
+            <div class="cover-line"></div>
+
+            <div class="cover-grid">
+                <div>
+                    <span>REPORT PURPOSE</span>
+                    <p>
+                        Evidence-oriented solution summary covering the problem,
+                        technical approach, security assessment workflow,
+                        AI-assisted analysis, reporting and prototype scope.
+                    </p>
+                </div>
+
+                <div>
+                    <span>POSITIONING</span>
+                    <p>
+                        A passive network forensic framework that evaluates the
+                        cryptographic security posture of enterprise email
+                        communications from captured network traffic.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 01 -->
+        <section class="section">
+            <div class="section-number">01</div>
+            <h2>Evidence Snapshot</h2>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <strong>SMTP</strong>
+                    <span>Email protocol analysed</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>IMAP</strong>
+                    <span>Email protocol analysed</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>POP3</strong>
+                    <span>Email protocol analysed</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>PCAP</strong>
+                    <span>Passive forensic input</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>TLS</strong>
+                    <span>Handshake & crypto analysis</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>X.509</strong>
+                    <span>Certificate assessment</span>
+                </div>
+            </div>
+
+            <h3>Problem-to-Solution Map</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>System Gap</th>
+                        <th>RECONMAIL Response</th>
+                        <th>Primary Output</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Limited visibility into email cryptographic posture</td>
+                        <td>Passive PCAP-based protocol and TLS analysis</td>
+                        <td>Security posture assessment</td>
+                    </tr>
+
+                    <tr>
+                        <td>Manual protocol identification</td>
+                        <td>Automatic SMTP, IMAP and POP3 detection</td>
+                        <td>Protocol inventory</td>
+                    </tr>
+
+                    <tr>
+                        <td>STARTTLS weaknesses</td>
+                        <td>Negotiation detection and validation</td>
+                        <td>Encryption transition findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Complex TLS configuration analysis</td>
+                        <td>Handshake reconstruction and cryptographic parsing</td>
+                        <td>TLS security findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate configuration problems</td>
+                        <td>X.509 extraction and validation</td>
+                        <td>Certificate findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Large number of technical findings</td>
+                        <td>Risk classification and prioritization</td>
+                        <td>Prioritized remediation queue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 02 -->
+        <section class="section">
+            <div class="section-number">02</div>
+            <h2>Existing Ecosystem and RECONMAIL Role</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Existing Capability</th>
+                        <th>Current Role</th>
+                        <th>RECONMAIL Role</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Wireshark / packet analysis tools</td>
+                        <td>Packet-level visibility and protocol decoding</td>
+                        <td>Automated cryptographic posture interpretation</td>
+                    </tr>
+
+                    <tr>
+                        <td>PCAP datasets</td>
+                        <td>Captured network evidence</td>
+                        <td>Primary forensic input</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS analysis utilities</td>
+                        <td>Handshake and protocol inspection</td>
+                        <td>Integrated TLS security assessment</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate tooling</td>
+                        <td>Certificate inspection</td>
+                        <td>Certificate validation and risk correlation</td>
+                    </tr>
+
+                    <tr>
+                        <td>Security analyst workflow</td>
+                        <td>Manual interpretation and prioritization</td>
+                        <td>Evidence-linked findings and AI-assisted analysis</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Integration Boundary</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>RECONMAIL Builds</th>
+                        <th>Consumes / Coordinates</th>
+                        <th>Does Not Replace</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>PCAP analysis pipeline</td>
+                        <td>Captured network traffic</td>
+                        <td>Network capture infrastructure</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cryptographic assessment engine</td>
+                        <td>TLS and certificate evidence</td>
+                        <td>Email server infrastructure</td>
+                    </tr>
+
+                    <tr>
+                        <td>Risk classification layer</td>
+                        <td>Deterministic security findings</td>
+                        <td>Human security judgement</td>
+                    </tr>
+
+                    <tr>
+                        <td>Forensic reporting layer</td>
+                        <td>Session and cryptographic evidence</td>
+                        <td>Enterprise SOC platform</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 03 -->
+        <section class="section">
+            <div class="section-number">03</div>
+            <h2>Master Gap-to-Solution Matrix</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Problem / Gap</th>
+                        <th>RECONMAIL Solution</th>
+                        <th>USP / Outcome</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Manual email protocol identification</td>
+                        <td>Automatic SMTP, IMAP and POP3 detection</td>
+                        <td>AUTOMATED PROTOCOL DISCOVERY</td>
+                    </tr>
+
+                    <tr>
+                        <td>Encryption transition visibility</td>
+                        <td>STARTTLS negotiation detection and validation</td>
+                        <td>ENCRYPTION TRANSITION VISIBILITY</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fragmented packet-level analysis</td>
+                        <td>Complete TCP stream reconstruction</td>
+                        <td>SESSION-LEVEL FORENSICS</td>
+                    </tr>
+
+                    <tr>
+                        <td>Complex TLS negotiations</td>
+                        <td>TLS handshake reconstruction</td>
+                        <td>TLS SECURITY PROFILE</td>
+                    </tr>
+
+                    <tr>
+                        <td>Weak TLS configurations</td>
+                        <td>Version, cipher and key-exchange analysis</td>
+                        <td>CRYPTOGRAPHIC WEAKNESS DETECTION</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate-related vulnerabilities</td>
+                        <td>X.509 extraction, validation and expiry analysis</td>
+                        <td>CERTIFICATE SECURITY</td>
+                    </tr>
+
+                    <tr>
+                        <td>Large volume of findings</td>
+                        <td>Risk scoring and finding prioritization</td>
+                        <td>FIX THIS FIRST</td>
+                    </tr>
+
+                    <tr>
+                        <td>Technical findings require expert interpretation</td>
+                        <td>Evidence-constrained AI Security Analyst</td>
+                        <td>EXPLAINABLE SECURITY INTELLIGENCE</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Operational Impact</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Expected Operational Effect</th>
+                        <th>Measure</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Protocol visibility</td>
+                        <td>Reduces manual protocol inspection</td>
+                        <td>Protocol identification accuracy</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS assessment</td>
+                        <td>Standardizes cryptographic configuration analysis</td>
+                        <td>Sessions successfully assessed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate analysis</td>
+                        <td>Centralizes certificate security findings</td>
+                        <td>Certificates analysed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Risk prioritization</td>
+                        <td>Reduces analyst effort spent reviewing low-priority findings</td>
+                        <td>Prioritized finding accuracy</td>
+                    </tr>
+
+                    <tr>
+                        <td>Forensic reporting</td>
+                        <td>Produces structured evidence for investigation</td>
+                        <td>Reports generated</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 04 -->
+        <section class="section">
+            <div class="section-number">04</div>
+            <h2>Signature Innovation: Evidence-Linked Security Assessment</h2>
+
+            <div class="flow">
+                <div>PCAP<br><small>Captured Traffic</small></div>
+                <span>→</span>
+                <div>Protocol<br><small>Detection</small></div>
+                <span>→</span>
+                <div>TCP Stream<br><small>Reconstruction</small></div>
+                <span>→</span>
+                <div>TLS<br><small>Analysis</small></div>
+                <span>→</span>
+                <div>Certificate<br><small>Assessment</small></div>
+                <span>→</span>
+                <div>Risk<br><small>Classification</small></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Required System State</th>
+                        <th>Evidence Produced</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>PCAP ingestion</td>
+                        <td>Valid captured traffic available</td>
+                        <td>Capture metadata</td>
+                    </tr>
+
+                    <tr>
+                        <td>Protocol detection</td>
+                        <td>SMTP / IMAP / POP3 identified</td>
+                        <td>Protocol classification</td>
+                    </tr>
+
+                    <tr>
+                        <td>TCP reconstruction</td>
+                        <td>Communication stream reconstructed</td>
+                        <td>Session evidence</td>
+                    </tr>
+
+                    <tr>
+                        <td>STARTTLS analysis</td>
+                        <td>Encryption transition detected</td>
+                        <td>Negotiation evidence</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS handshake</td>
+                        <td>Handshake parameters extracted</td>
+                        <td>Version, cipher and key exchange</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate analysis</td>
+                        <td>X.509 certificate extracted</td>
+                        <td>Issuer, validity, key and signature data</td>
+                    </tr>
+
+                    <tr>
+                        <td>Security assessment</td>
+                        <td>Cryptographic configuration evaluated</td>
+                        <td>Security findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Prioritization</td>
+                        <td>Findings correlated and classified</td>
+                        <td>Risk-ranked remediation queue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 05 -->
+        <section class="section">
+            <div class="section-number">05</div>
+            <h2>Core USPs / WOW Factors</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>USP / WOW Factor</th>
+                        <th>Working Principle</th>
+                        <th>Practical Value</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AI Security Analyst</td>
+                        <td>
+                            Converts deterministic technical findings into
+                            analyst-readable explanations and recommendations.
+                        </td>
+                        <td>Reduces interpretation effort.</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Explainable Security Posture Score</td>
+                        <td>
+                            Combines assessed security dimensions and exposes
+                            the contributors behind the score.
+                        </td>
+                        <td>Makes risk understandable.</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Evidence-Linked Findings</td>
+                        <td>
+                            Findings retain session, timestamp, observed value
+                            and evidence references.
+                        </td>
+                        <td>Improves forensic traceability.</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Fix This First</td>
+                        <td>
+                            Prioritizes findings using severity, confidence,
+                            affected scope and security impact.
+                        </td>
+                        <td>Supports remediation planning.</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Before-vs-After Assessment</td>
+                        <td>
+                            Controlled weak and hardened captures can be
+                            compared to demonstrate posture improvement.
+                        </td>
+                        <td>Demonstrates measurable remediation.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Secondary System Benefits</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Benefit</th>
+                        <th>RECONMAIL Mechanism</th>
+                        <th>Implementation Note</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Reduced manual analysis</td>
+                        <td>Automated protocol and TLS extraction</td>
+                        <td>Depends on capture quality and parser coverage.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Improved analyst visibility</td>
+                        <td>Centralized dashboard and findings view</td>
+                        <td>Supports investigation workflow.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Better remediation focus</td>
+                        <td>Prioritized security findings</td>
+                        <td>Priority should remain evidence-based.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Auditability</td>
+                        <td>Evidence-linked forensic records</td>
+                        <td>Supports reproducible investigation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 06 -->
+        <section class="section">
+            <div class="section-number">06</div>
+            <h2>Technical Architecture</h2>
+
+            <div class="architecture">
+
+                <div class="arch-layer">
+                    <span class="layer-title">INPUT</span>
+                    <strong>PCAP Files</strong>
+                    <small>Captured SMTP / IMAP / POP3 traffic</small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-layer">
+                    <span class="layer-title">FORENSIC PARSING</span>
+                    <strong>Protocol & TCP Analysis</strong>
+                    <small>Protocol detection · Stream reconstruction</small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-layer">
+                    <span class="layer-title">TLS ANALYSIS</span>
+                    <strong>Handshake & Cryptographic Extraction</strong>
+                    <small>
+                        TLS version · Cipher suite · Key exchange · STARTTLS
+                    </small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-layer">
+                    <span class="layer-title">CERTIFICATE ANALYSIS</span>
+                    <strong>X.509 Security Assessment</strong>
+                    <small>
+                        Chain · Expiry · Public key · Signature algorithm
+                    </small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-layer">
+                    <span class="layer-title">SECURITY ENGINE</span>
+                    <strong>Deterministic Rule Assessment</strong>
+                    <small>
+                        Deprecated TLS · Weak crypto · Insecure configuration
+                    </small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-layer">
+                    <span class="layer-title">AI / ML</span>
+                    <strong>Risk Intelligence</strong>
+                    <small>
+                        Risk classification · Anomaly detection · Prioritization
+                    </small>
+                </div>
+
+                <div class="connector">↓</div>
+
+                <div class="arch-output">
+                    <div>Dashboard</div>
+                    <div>JSON</div>
+                    <div>PDF</div>
+                    <div>HTML</div>
+                </div>
+
+            </div>
+
+            <h3>Technology Stack</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>HTML · CSS · JavaScript</td>
+                        <td>Security dashboard and reporting interface</td>
+                    </tr>
+
+                    <tr>
+                        <td>Backend</td>
+                        <td>Python · FastAPI</td>
+                        <td>Analysis APIs and processing pipeline</td>
+                    </tr>
+
+                    <tr>
+                        <td>PCAP Analysis</td>
+                        <td>Scapy · PyShark / TShark</td>
+                        <td>Packet and protocol analysis</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cryptography</td>
+                        <td>Python cryptography / X.509 tooling</td>
+                        <td>Certificate and cryptographic analysis</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI / ML</td>
+                        <td>Scikit-learn</td>
+                        <td>Risk classification and anomaly analysis</td>
+                    </tr>
+
+                    <tr>
+                        <td>Database</td>
+                        <td>SQLite / PostgreSQL</td>
+                        <td>Findings, sessions and evidence metadata</td>
+                    </tr>
+
+                    <tr>
+                        <td>Reports</td>
+                        <td>JSON · PDF · HTML</td>
+                        <td>Forensic reporting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 07 -->
+        <section class="section">
+            <div class="section-number">07</div>
+            <h2>Security Assessment Framework</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assessment Area</th>
+                        <th>Checks Performed</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Protocol Security</td>
+                        <td>SMTP / IMAP / POP3 identification and configuration</td>
+                        <td>Protocol findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>STARTTLS</td>
+                        <td>Negotiation detection and encryption transition</td>
+                        <td>STARTTLS status</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS Version</td>
+                        <td>Negotiated TLS version identification</td>
+                        <td>Version security assessment</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cipher Suite</td>
+                        <td>Cipher strength and legacy configuration analysis</td>
+                        <td>Cipher findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Key Exchange</td>
+                        <td>ECDHE / DHE / RSA identification</td>
+                        <td>Forward secrecy assessment</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate</td>
+                        <td>Validity, chain, algorithm and key-length analysis</td>
+                        <td>Certificate findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cryptographic Policy</td>
+                        <td>Deprecated and weak algorithm detection</td>
+                        <td>Policy violations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Anomaly Analysis</td>
+                        <td>Suspicious TLS behavior and unusual characteristics</td>
+                        <td>Anomaly indicators</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 08 -->
+        <section class="section">
+            <div class="section-number">08</div>
+            <h2>AI-Assisted Security Intelligence</h2>
+
+            <div class="ai-grid">
+
+                <div class="ai-card">
+                    <span>01</span>
+                    <h3>Risk Classification</h3>
+                    <p>
+                        Classifies observed security conditions into
+                        actionable risk categories using extracted
+                        cryptographic features.
+                    </p>
+                </div>
+
+                <div class="ai-card">
+                    <span>02</span>
+                    <h3>Anomaly Detection</h3>
+                    <p>
+                        Identifies unusual TLS session characteristics
+                        that may require additional analyst review.
+                    </p>
+                </div>
+
+                <div class="ai-card">
+                    <span>03</span>
+                    <h3>Posture Scoring</h3>
+                    <p>
+                        Summarizes multiple security dimensions into an
+                        explainable security posture representation.
+                    </p>
+                </div>
+
+                <div class="ai-card">
+                    <span>04</span>
+                    <h3>Finding Prioritization</h3>
+                    <p>
+                        Helps analysts focus on findings with greater
+                        security relevance and remediation urgency.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="notice">
+                <strong>Design Principle</strong>
+                <p>
+                    Deterministic protocol parsers, cryptographic parsers
+                    and security rules establish the observed technical
+                    evidence. AI/ML is used as an assistance layer for
+                    classification, anomaly analysis, prioritization and
+                    explanation rather than as the source of cryptographic truth.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 09 -->
+        <section class="section">
+            <div class="section-number">09</div>
+            <h2>Forensic Reporting and Dashboard</h2>
+
+            <div class="report-grid">
+
+                <div class="report-card">
+                    <span>01</span>
+                    <h3>Security Dashboard</h3>
+                    <p>
+                        Overall posture, sessions, findings, certificates,
+                        TLS distribution and priority findings.
+                    </p>
+                </div>
+
+                <div class="report-card">
+                    <span>02</span>
+                    <h3>Session Analysis</h3>
+                    <p>
+                        Protocol, endpoints, timeline, TLS parameters
+                        and session-level evidence.
+                    </p>
+                </div>
+
+                <div class="report-card">
+                    <span>03</span>
+                    <h3>Findings</h3>
+                    <p>
+                        Severity, confidence, evidence, affected session
+                        and remediation context.
+                    </p>
+                </div>
+
+                <div class="report-card">
+                    <span>04</span>
+                    <h3>Certificate Inventory</h3>
+                    <p>
+                        Issuer, algorithm, key length, signature,
+                        validity and expiration status.
+                    </p>
+                </div>
+
+                <div class="report-card">
+                    <span>05</span>
+                    <h3>AI Security Analyst</h3>
+                    <p>
+                        Evidence-based explanation of observed findings
+                        and recommended remediation actions.
+                    </p>
+                </div>
+
+                <div class="report-card">
+                    <span>06</span>
+                    <h3>Exportable Reports</h3>
+                    <p>
+                        Structured JSON, PDF and HTML forensic reports
+                        for documentation and review.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 10 -->
+        <section class="section">
+            <div class="section-number">10</div>
+            <h2>Feasibility, Validation and Deployment Roadmap</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Challenge</th>
+                        <th>Approach</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>PCAP processing</td>
+                        <td>Large or fragmented captures</td>
+                        <td>Stream-oriented parsing and controlled datasets</td>
+                    </tr>
+
+                    <tr>
+                        <td>Protocol identification</td>
+                        <td>Non-standard or incomplete traffic</td>
+                        <td>Layered protocol signatures and validation</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS reconstruction</td>
+                        <td>Incomplete handshakes</td>
+                        <td>Graceful partial-session analysis</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate validation</td>
+                        <td>Incomplete certificate chains</td>
+                        <td>Explicit validation states and evidence tracking</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI analysis</td>
+                        <td>Risk of unsupported conclusions</td>
+                        <td>Evidence-constrained AI using deterministic findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Validation</td>
+                        <td>Need for reproducible evidence</td>
+                        <td>Controlled synthetic weak and hardened captures</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Deployment Roadmap</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Work Package</th>
+                        <th>Output / Gate</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Evidence and workflow validation</td>
+                        <td>Validated PCAP analysis workflow</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Core forensic engine</td>
+                        <td>Protocol, TCP and TLS analysis</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Cryptographic assessment</td>
+                        <td>Certificate and weak-crypto detection</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>AI-assisted intelligence</td>
+                        <td>Risk, anomaly and prioritization layer</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Dashboard and reporting</td>
+                        <td>Interactive analyst interface</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Controlled validation</td>
+                        <td>Before-vs-after security demonstration</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 11 -->
+        <section class="section">
+            <div class="section-number">11</div>
+            <h2>Hackathon MVP and Measurement Framework</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>KPI</th>
+                        <th>Definition</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Protocol Detection Rate</td>
+                        <td>Correctly identified email sessions / analysed sessions</td>
+                        <td>Protocol analysis reliability</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS Analysis Coverage</td>
+                        <td>Sessions with successfully extracted TLS parameters</td>
+                        <td>Forensic coverage</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate Extraction Rate</td>
+                        <td>Certificates successfully extracted / observed certificates</td>
+                        <td>Certificate visibility</td>
+                    </tr>
+
+                    <tr>
+                        <td>Finding Confidence</td>
+                        <td>Evidence-supported confidence assigned to findings</td>
+                        <td>Analyst trust</td>
+                    </tr>
+
+                    <tr>
+                        <td>Prioritization Accuracy</td>
+                        <td>High-value findings correctly prioritized</td>
+                        <td>Remediation efficiency</td>
+                    </tr>
+
+                    <tr>
+                        <td>Report Generation</td>
+                        <td>Successful JSON / PDF / HTML report creation</td>
+                        <td>Investigation output</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Hackathon Demonstration Scope</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>MVP Module</th>
+                        <th>Demonstration Scope</th>
+                        <th>Evidence Shown</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>PCAP Input</td>
+                        <td>Controlled synthetic email capture</td>
+                        <td>Capture loaded successfully</td>
+                    </tr>
+
+                    <tr>
+                        <td>Session Analysis</td>
+                        <td>SMTP / IMAP / POP3 sessions</td>
+                        <td>Session table and details</td>
+                    </tr>
+
+                    <tr>
+                        <td>TLS Analysis</td>
+                        <td>TLS versions, ciphers and key exchange</td>
+                        <td>Security distribution</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate Analysis</td>
+                        <td>X.509 certificate inventory</td>
+                        <td>Validity and crypto findings</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI Analyst</td>
+                        <td>Evidence-based finding explanation</td>
+                        <td>Risk explanation and recommendations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dashboard</td>
+                        <td>Posture and prioritized findings</td>
+                        <td>Interactive security overview</td>
+                    </tr>
+
+                    <tr>
+                        <td>Reports</td>
+                        <td>JSON / PDF / HTML output</td>
+                        <td>Forensic report artifacts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- 12 -->
+        <section class="section">
+            <div class="section-number">12</div>
+            <h2>Research Limits and Presentation Guardrails</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Current Limitation</th>
+                        <th>Required Next Step</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Encrypted traffic</td>
+                        <td>
+                            Passive PCAP analysis generally exposes metadata
+                            and handshake information rather than decrypted
+                            message content.
+                        </td>
+                        <td>Focus assessment on observable protocol and cryptographic evidence.</td>
+                    </tr>
+
+                    <tr>
+                        <td>PCAP quality</td>
+                        <td>Missing packets can limit session reconstruction.</td>
+                        <td>Record partial-analysis states.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Certificate chains</td>
+                        <td>Not every capture necessarily contains a complete chain.</td>
+                        <td>Distinguish unavailable evidence from invalid certificates.</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI analysis</td>
+                        <td>AI output should not establish cryptographic facts.</td>
+                        <td>Ground AI explanations in deterministic findings.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Prototype data</td>
+                        <td>Current dashboard values may represent demonstration data.</td>
+                        <td>Replace with measured results when the forensic backend is implemented.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notice warning">
+                <strong>Presentation Guardrail</strong>
+                <p>
+                    RECONMAIL is positioned as a passive forensic assessment
+                    framework. The prototype should clearly distinguish
+                    demonstrated functionality, synthetic demonstration data,
+                    and future backend capabilities.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 13 -->
+        <section class="section">
+            <div class="section-number">13</div>
+            <h2>Judge Q&A</h2>
+
+            <div class="qa">
+
+                <div class="qa-item">
+                    <h3>What exactly does RECONMAIL analyse?</h3>
+                    <p>
+                        Captured network traffic containing SMTP, IMAP and POP3
+                        communications, with emphasis on session reconstruction,
+                        TLS negotiations, certificates and cryptographic posture.
+                    </p>
+                </div>
+
+                <div class="qa-item">
+                    <h3>Does RECONMAIL decrypt email content?</h3>
+                    <p>
+                        The passive framework focuses on observable network and
+                        cryptographic evidence. Encrypted message content is not
+                        assumed to be available from an ordinary PCAP.
+                    </p>
+                </div>
+
+                <div class="qa-item">
+                    <h3>Why use AI?</h3>
+                    <p>
+                        AI assists with risk classification, anomaly detection,
+                        prioritization and explanation after deterministic
+                        technical evidence has been extracted.
+                    </p>
+                </div>
+
+                <div class="qa-item">
+                    <h3>What makes the system different from Wireshark?</h3>
+                    <p>
+                        Wireshark provides extensive packet and protocol visibility.
+                        RECONMAIL focuses that evidence into an automated
+                        cryptographic security posture assessment and remediation
+                        workflow.
+                    </p>
+                </div>
+
+                <div class="qa-item">
+                    <h3>How is the security score calculated?</h3>
+                    <p>
+                        The posture representation is based on assessed dimensions
+                        such as TLS configuration, certificates, cryptographic
+                        algorithms, protocol configuration and forward secrecy,
+                        with the contributing findings exposed to the analyst.
+                    </p>
+                </div>
+
+                <div class="qa-item">
+                    <h3>How will the prototype be validated?</h3>
+                    <p>
+                        Through controlled synthetic email captures representing
+                        weak and hardened configurations, followed by comparison
+                        of extracted evidence, findings and posture.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 14 -->
+        <section class="section">
+            <div class="section-number">14</div>
+            <h2>One-Line Positioning</h2>
+
+            <div class="positioning">
+                <div>
+                    <span>PROBLEM FOCUS</span>
+                    <strong>Cryptographic weaknesses in enterprise email communications</strong>
+                </div>
+
+                <div>
+                    <span>PRIMARY INNOVATION</span>
+                    <strong>Evidence-linked cryptographic security posture assessment</strong>
+                </div>
+
+                <div>
+                    <span>OPERATING MODEL</span>
+                    <strong>Passive PCAP-based forensic analysis</strong>
+                </div>
+
+                <div>
+                    <span>AI ROLE</span>
+                    <strong>Risk intelligence, anomaly detection and analyst assistance</strong>
+                </div>
+
+                <div>
+                    <span>OUTPUT</span>
+                    <strong>Dashboard + prioritized findings + forensic reports</strong>
+                </div>
+
+                <div>
+                    <span>VALIDATION</span>
+                    <strong>Controlled synthetic weak-versus-hardened captures</strong>
+                </div>
+            </div>
+
+            <div class="closing">
+                <div class="closing-brand">RECONMAIL</div>
+                <p>
+                    From captured traffic to cryptographic security intelligence.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 15 -->
+        <section class="section references">
+            <div class="section-number">15</div>
+            <h2>Source Register</h2>
+
+            <ol>
+                <li>
+                    Smart India Hackathon 2026,
+                    <strong>SIH26159 — SecureMailScope: AI-Assisted Cryptographic
+                    Security Posture Assessment for Secure Email Communications.</strong>
+                </li>
+
+                <li>
+                    NIST,
+                    <strong>SP 800-52 Rev. 2 — Guidelines for the Selection,
+                    Configuration, and Use of Transport Layer Security.</strong>
+                </li>
+
+                <li>
+                    IETF,
+                    <strong>RFC 8314 — Cleartext Considered Obsolete:
+                    Use of TLS for Email Submission and Access.</strong>
+                </li>
+
+                <li>
+                    NIST,
+                    <strong>Trustworthy Email</strong>.
+                </li>
+
+                <li>
+                    Controlled synthetic SMTP, IMAP and POP3 PCAP datasets
+                    for prototype validation.
+                </li>
+            </ol>
+
+            <div class="footer-note">
+                RECONMAIL · SIH26159 · Team Audax · Smart India Hackathon 2026
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
